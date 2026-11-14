@@ -1,0 +1,23 @@
+{
+  "train": {
+    "total_transactions": 6010937,
+    "fraud_cases": 5007,
+    "fraud_rate_pct": 0.0833,
+    "step_min": 1,
+    "step_max": 445
+  },
+  "val": {
+    "total_transactions": 228103,
+    "fraud_cases": 1552,
+    "fraud_rate_pct": 0.6804,
+    "step_min": 446,
+    "step_max": 594
+  },
+  "test": {
+    "total_transactions": 123580,
+    "fraud_cases": 1654,
+    "fraud_rate_pct": 1.3384,
+    "step_min": 595,
+    "step_max": 743
+  }
+}

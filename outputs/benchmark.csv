@@ -1,0 +1,4 @@
+tier,rows_processed,reps,elapsed_mean_seconds,elapsed_std_seconds,throughput_rows_per_sec,num_partitions
+B1_500K,500000,3,1.456,0.59,343348.1,1
+B2_2M,2000000,3,4.11,1.312,486591.6,1
+B3_Full,6362620,3,0.314,0.076,20292131.0,8

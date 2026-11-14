@@ -1,0 +1,37 @@
+[
+  {
+    "type":"CASH_OUT",
+    "total_txns":2237500,
+    "fraud_txns":4116,
+    "fraud_rate_pct":0.184,
+    "avg_fraud_amount":1455102.5900000001
+  },
+  {
+    "type":"TRANSFER",
+    "total_txns":532909,
+    "fraud_txns":4097,
+    "fraud_rate_pct":0.7688,
+    "avg_fraud_amount":1480891.6699999999
+  },
+  {
+    "type":"PAYMENT",
+    "total_txns":2151495,
+    "fraud_txns":0,
+    "fraud_rate_pct":0.0,
+    "avg_fraud_amount":null
+  },
+  {
+    "type":"DEBIT",
+    "total_txns":41432,
+    "fraud_txns":0,
+    "fraud_rate_pct":0.0,
+    "avg_fraud_amount":null
+  },
+  {
+    "type":"CASH_IN",
+    "total_txns":1399284,
+    "fraud_txns":0,
+    "fraud_rate_pct":0.0,
+    "avg_fraud_amount":null
+  }
+]

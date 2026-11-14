@@ -1,0 +1,12 @@
+[
+  {
+    "isFraud":0,
+    "accounts_emptied":1512569,
+    "emptied_pct":"23.80"
+  },
+  {
+    "isFraud":1,
+    "accounts_emptied":8012,
+    "emptied_pct":"97.55"
+  }
+]

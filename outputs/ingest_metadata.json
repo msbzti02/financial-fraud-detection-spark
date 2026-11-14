@@ -1,0 +1,10 @@
+{
+  "raw_csv_path": "data/raw/paysim.csv",
+  "raw_csv_size_mb": 470.67,
+  "bronze_parquet_path": "data/bronze/paysim_bronze.parquet",
+  "record_count": 6362620,
+  "column_count": 11,
+  "ingestion_duration_seconds": 7.42,
+  "partitions": 8,
+  "compression": "snappy"
+}

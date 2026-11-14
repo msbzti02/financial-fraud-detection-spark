@@ -1,0 +1,24 @@
+{
+  "total_records": 6362620,
+  "null_counts": {
+    "step": 0,
+    "type": 0,
+    "amount": 0,
+    "nameOrig": 0,
+    "oldbalanceOrg": 0,
+    "newbalanceOrig": 0,
+    "nameDest": 0,
+    "oldbalanceDest": 0,
+    "newbalanceDest": 0,
+    "isFraud": 0,
+    "isFlaggedFraud": 0
+  },
+  "duplicate_transactions_found": 0,
+  "negative_amounts_count": 0,
+  "zero_amounts_count": 16,
+  "class_distribution": {
+    "legitimate_count": 6354407,
+    "fraud_count": 8213,
+    "fraud_percentage": 0.1291
+  }
+}

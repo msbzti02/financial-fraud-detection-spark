@@ -1,0 +1,14 @@
+[
+  {
+    "recipient_prefix":"C",
+    "txn_count":4211125,
+    "fraud_txns":8213,
+    "fraud_rate_pct":0.195
+  },
+  {
+    "recipient_prefix":"M",
+    "txn_count":2151495,
+    "fraud_txns":0,
+    "fraud_rate_pct":0.0
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "amount_tier":"1_Under_1K",
+    "txn_count":142642,
+    "fraud_count":58,
+    "fraud_rate_pct":0.0407
+  },
+  {
+    "amount_tier":"2_1K-10K",
+    "txn_count":1143361,
+    "fraud_count":220,
+    "fraud_rate_pct":0.0192
+  },
+  {
+    "amount_tier":"3_10K-100K",
+    "txn_count":2239253,
+    "fraud_count":1429,
+    "fraud_rate_pct":0.0638
+  },
+  {
+    "amount_tier":"4_100K-1M",
+    "txn_count":2706738,
+    "fraud_count":3800,
+    "fraud_rate_pct":0.1404
+  },
+  {
+    "amount_tier":"5_1M_and_above",
+    "txn_count":130626,
+    "fraud_count":2706,
+    "fraud_rate_pct":2.0716
+  }
+]

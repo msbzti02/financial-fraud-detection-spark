@@ -1,0 +1,99 @@
+{
+  "experiment": "E2_Same_Test_Set_Different_Training_Sizes",
+  "protocol": {
+    "description": "Identical held-out test rows and F1 input features; training sizes and class distributions differ.",
+    "test_sample_size": 5000,
+    "test_natural_fraud_count": 66,
+    "test_fraud_prevalence_pct": 1.32,
+    "tabpfn_or_fallback_context_size": 5000,
+    "context_fraud_count": 2500,
+    "context_legitimate_count": 2500,
+    "spark_training_sample_size": 6010937,
+    "decision_threshold": 0.5,
+    "random_seed": 42,
+    "row_alignment": "Shared test rows; Spark predictions checked by txn_id"
+  },
+  "provenance": {
+    "tabpfn_status": "SUCCESS_TABPFN_INFERENCE",
+    "tabpfn_error": null,
+    "pretrained_inference_completed": true,
+    "requested_device": "cpu",
+    "context_note": "A bounded balanced context was selected for this experiment; this is not a statement of TabPFN architectural limits."
+  },
+  "models": {
+    "tabpfn_or_comparator": {
+      "model": "TabPFN_Pretrained",
+      "pr_auc": 1.0,
+      "roc_auc": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "true_positives": 66,
+      "false_positives": 0,
+      "true_negatives": 4934,
+      "false_negatives": 0,
+      "total_evaluated": 5000,
+      "cm": [
+        [
+          4934,
+          0
+        ],
+        [
+          0,
+          66
+        ]
+      ],
+      "status": "SUCCESS_TABPFN_INFERENCE",
+      "fit_predict_seconds": 241.69,
+      "training_context_size": 5000
+    },
+    "spark_logistic_regression": {
+      "model": "Spark_LR_F1 (Same Test Subset)",
+      "pr_auc": 0.86535,
+      "roc_auc": 0.99604,
+      "precision": 0.2549,
+      "recall": 0.98485,
+      "f1": 0.40498,
+      "true_positives": 65,
+      "false_positives": 190,
+      "true_negatives": 4744,
+      "false_negatives": 1,
+      "total_evaluated": 5000,
+      "cm": [
+        [
+          4744,
+          190
+        ],
+        [
+          1,
+          65
+        ]
+      ],
+      "training_sample_size": 6010937
+    },
+    "spark_random_forest": {
+      "model": "Spark_RF_F1 (Same Test Subset)",
+      "pr_auc": 0.96418,
+      "roc_auc": 0.9994,
+      "precision": 1.0,
+      "recall": 0.78788,
+      "f1": 0.88136,
+      "true_positives": 52,
+      "false_positives": 0,
+      "true_negatives": 4934,
+      "false_negatives": 14,
+      "total_evaluated": 5000,
+      "cm": [
+        [
+          4934,
+          0
+        ],
+        [
+          14,
+          52
+        ]
+      ],
+      "training_sample_size": 6010937
+    }
+  }
+}

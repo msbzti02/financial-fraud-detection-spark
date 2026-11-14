@@ -1,0 +1,65 @@
+[
+  {
+    "Strategy": "1. Unweighted (Scaled)",
+    "PR-AUC": 0.8449,
+    "Precision": 1.0,
+    "Recall": 0.4925,
+    "F1-Score": 0.66,
+    "TP": 66,
+    "FP": 0,
+    "FN": 68,
+    "TN": 9866,
+    "cm": [
+      [
+        9866,
+        0
+      ],
+      [
+        68,
+        66
+      ]
+    ]
+  },
+  {
+    "Strategy": "2. Class-Weighted (Scaled)",
+    "PR-AUC": 0.8469,
+    "Precision": 0.2409,
+    "Recall": 0.9925,
+    "F1-Score": 0.3878,
+    "TP": 133,
+    "FP": 419,
+    "FN": 1,
+    "TN": 9447,
+    "cm": [
+      [
+        9447,
+        419
+      ],
+      [
+        1,
+        133
+      ]
+    ]
+  },
+  {
+    "Strategy": "3. SMOTENC (Scaled)",
+    "PR-AUC": 0.8149,
+    "Precision": 0.2495,
+    "Recall": 0.9776,
+    "F1-Score": 0.3976,
+    "TP": 131,
+    "FP": 394,
+    "FN": 3,
+    "TN": 9472,
+    "cm": [
+      [
+        9472,
+        394
+      ],
+      [
+        3,
+        131
+      ]
+    ]
+  }
+]

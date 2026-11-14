@@ -1,0 +1,66 @@
+project:
+  name: "financial-fraud-bigdata"
+  version: "1.0.0"
+  random_seed: 42
+
+paths:
+  raw_csv: "data/raw/paysim.csv"
+  bronze_parquet: "data/bronze/paysim_bronze.parquet"
+  silver_parquet: "data/silver/paysim_silver.parquet"
+  gold_parquet: "data/gold/paysim_gold.parquet"
+  outputs_dir: "outputs"
+  figures_dir: "outputs/figures"
+  models_dir: "outputs/models"
+
+spark:
+  app_name: "FinancialFraudDetection"
+  master: "local[*]"
+  driver_memory: "6g"
+  executor_memory: "6g"
+  sql_shuffle_partitions: 8
+  default_parallelism: 8
+
+data:
+  expected_rows: 6362620
+  expected_cols: 11
+  schema_columns:
+    - name: "step"
+      type: "integer"
+    - name: "type"
+      type: "string"
+    - name: "amount"
+      type: "double"
+    - name: "nameOrig"
+      type: "string"
+    - name: "oldbalanceOrg"
+      type: "double"
+    - name: "newbalanceOrig"
+      type: "double"
+    - name: "nameDest"
+      type: "string"
+    - name: "oldbalanceDest"
+      type: "double"
+    - name: "newbalanceDest"
+      type: "double"
+    - name: "isFraud"
+      type: "integer"
+    - name: "isFlaggedFraud"
+      type: "integer"
+
+split:
+  method: "chronological_by_step"
+  train_ratio: 0.60
+  val_ratio: 0.20
+  test_ratio: 0.20
+
+models:
+  logistic_regression:
+    max_iter: 100
+    reg_param: 0.01
+    elastic_net_param: 0.0
+  random_forest:
+    num_trees: 50
+    max_depth: 8
+  tabpfn:
+    max_train_samples: 5000
+    seed: 42

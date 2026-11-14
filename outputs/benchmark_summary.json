@@ -1,0 +1,43 @@
+{
+  "scaling_tiers": [
+    {
+      "tier": "B1_500K",
+      "rows_processed": 500000,
+      "reps": 3,
+      "elapsed_mean_seconds": 1.456,
+      "elapsed_std_seconds": 0.59,
+      "throughput_rows_per_sec": 343348.1,
+      "num_partitions": 1
+    },
+    {
+      "tier": "B2_2M",
+      "rows_processed": 2000000,
+      "reps": 3,
+      "elapsed_mean_seconds": 4.11,
+      "elapsed_std_seconds": 1.312,
+      "throughput_rows_per_sec": 486591.6,
+      "num_partitions": 1
+    },
+    {
+      "tier": "B3_Full",
+      "rows_processed": 6362620,
+      "reps": 3,
+      "elapsed_mean_seconds": 0.314,
+      "elapsed_std_seconds": 0.076,
+      "throughput_rows_per_sec": 20292131.0,
+      "num_partitions": 8
+    }
+  ],
+  "storage_comparison": {
+    "csv_scan_mean_seconds": 1.507,
+    "csv_scan_std_seconds": 0.299,
+    "parquet_scan_mean_seconds": 0.228,
+    "parquet_scan_std_seconds": 0.052,
+    "speedup_factor": 6.6094
+  },
+  "environment": {
+    "master": "local[*]",
+    "driver_memory": "6g",
+    "partitions": 8
+  }
+}

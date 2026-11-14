@@ -1,0 +1,68 @@
+[
+  {
+    "name": "txn_hour",
+    "feature_set": "F0, F1",
+    "formula": "step % 24",
+    "leakage_rule": "Known at transaction time (hour index 0-23)"
+  },
+  {
+    "name": "txn_day",
+    "feature_set": "F0, F1",
+    "formula": "floor(step / 24)",
+    "leakage_rule": "Known at transaction time (day index 0-30)"
+  },
+  {
+    "name": "log_amount",
+    "feature_set": "F0, F1",
+    "formula": "log(1 + amount)",
+    "leakage_rule": "Known at transaction time"
+  },
+  {
+    "name": "origin_balance_before",
+    "feature_set": "F0, F1",
+    "formula": "oldbalanceOrg",
+    "leakage_rule": "Pre-transaction balance only; excludes newbalanceOrig"
+  },
+  {
+    "name": "destination_balance_before",
+    "feature_set": "F0, F1",
+    "formula": "oldbalanceDest",
+    "leakage_rule": "Pre-transaction balance only; excludes newbalanceDest"
+  },
+  {
+    "name": "type_index",
+    "feature_set": "F0, F1",
+    "formula": "StringIndexer(type) fit on train only",
+    "leakage_rule": "Fitted strictly on training split"
+  },
+  {
+    "name": "amount_to_origin_ratio",
+    "feature_set": "F1",
+    "formula": "amount / (oldbalanceOrg + 1.0)",
+    "leakage_rule": "Engineered ratio using only pre-transaction values"
+  },
+  {
+    "name": "insufficient_origin_balance",
+    "feature_set": "F1",
+    "formula": "1.0 if amount > oldbalanceOrg else 0.0",
+    "leakage_rule": "Uses transaction amount and pre-transaction origin balance"
+  },
+  {
+    "name": "dest_zero_balance_flag",
+    "feature_set": "F1",
+    "formula": "1.0 if oldbalanceDest == 0 else 0.0",
+    "leakage_rule": "Uses only the recorded pre-transaction destination balance"
+  },
+  {
+    "name": "is_transfer",
+    "feature_set": "F1",
+    "formula": "1.0 if type == 'TRANSFER' else 0.0",
+    "leakage_rule": "Transaction type is known at transaction time"
+  },
+  {
+    "name": "is_cash_out",
+    "feature_set": "F1",
+    "formula": "1.0 if type == 'CASH_OUT' else 0.0",
+    "leakage_rule": "Transaction type is known at transaction time"
+  }
+]
